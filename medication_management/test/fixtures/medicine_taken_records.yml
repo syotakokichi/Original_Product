@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_medicine_id: 1
+  date_taken: 2023-07-10
+  time_taken: 2023-07-10 18:58:07
+  taken: false
+
+two:
+  patient_medicine_id: 1
+  date_taken: 2023-07-10
+  time_taken: 2023-07-10 18:58:07
+  taken: false
