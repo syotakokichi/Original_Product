@@ -39,5 +39,3 @@ class NursesController < ApplicationController
     params.require(:nurse).permit(:employee_id, :station_id, :password)
   end
 end
-
-# コントローラー作成

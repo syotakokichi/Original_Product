@@ -48,5 +48,3 @@ class MedicineTakenRecordsController < ApplicationController
       params.require(:medicine_taken_record).permit(:patient_medicine_id, :date_taken, :time_taken, :taken)
     end
 end
-
-# コントローラー作成
