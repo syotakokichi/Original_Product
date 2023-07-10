@@ -48,3 +48,5 @@ class MedicinesController < ApplicationController
       params.require(:medicine).permit(:name, :unit, :frequency)
     end
 end
+
+# コントローラー作成
