@@ -38,3 +38,5 @@ class NursingStationsController < ApplicationController
     params.require(:nursing_station).permit(:name, :phone, :email)
   end
 end
+
+# コントローラー作成

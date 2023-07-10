@@ -8,3 +8,5 @@ class CreateNursePatients < ActiveRecord::Migration[7.0]
     end
   end
 end
+
+# モデル作成

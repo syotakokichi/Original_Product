@@ -48,3 +48,5 @@ class PatientMedicinesController < ApplicationController
       params.require(:patient_medicine).permit(:patient_id, :medicine_id)
     end
 end
+
+# コントローラー作成

@@ -38,3 +38,5 @@ class PatientsController < ApplicationController
     params.require(:patient).permit(:name, :sex, :dob, :address, :phone, :emergency_contact)
   end
 end
+
+# コントローラー作成
