@@ -3,7 +3,7 @@ import React from 'react';
 import { useRecoilState } from 'recoil';
 import { useNavigate } from 'react-router-dom';
 import { patientListState, Patient } from '../../state/patients';
-import PatientForm from '../../shared/PatientForm';
+import PatientForm from '../shared/PatientForm';
 
 const PatientCreate: React.FC = () => {
   const [patients, setPatients] = useRecoilState(patientListState);

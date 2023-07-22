@@ -1,6 +1,6 @@
 // PatientForm.tsx
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Patient } from '../state/patients';
+import { Patient } from '../../state/patients';
 
 interface PatientFormProps {
   defaultValues?: Patient;

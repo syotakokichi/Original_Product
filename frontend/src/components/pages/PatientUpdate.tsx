@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { patientListState } from '../../state/patients';
 import { Patient } from '../../state/patients';
-import PatientForm from '../../shared/PatientForm';
+import PatientForm from '../shared/PatientForm';
 
 const PatientUpdate: React.FC = () => {
   const { id } = useParams<{ id: string }>();
