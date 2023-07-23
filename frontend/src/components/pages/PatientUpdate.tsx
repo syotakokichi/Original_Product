@@ -4,6 +4,8 @@ import { useRecoilState } from 'recoil';
 import { patientListState } from '../../state/patients';
 import { Patient } from '../../state/patients';
 import PatientForm from '../shared/PatientForm';
+import { Container, Button } from '../../styles/CommonStyles';
+import { FormTitle } from '../../styles/PageStyles';
 
 const PatientUpdate: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -21,10 +23,11 @@ const PatientUpdate: React.FC = () => {
   };
 
   return patient ? (
-    <div>
-      <h1>Edit Patient</h1>
+    <Container>
+      <FormTitle>患者情報</FormTitle>
       <PatientForm defaultValues={patient} onSubmit={onSubmit} />
-    </div>
+      <Button onClick={() => navigate('/patients')}>戻る</Button>
+    </Container>
   ) : null;
 };
 
