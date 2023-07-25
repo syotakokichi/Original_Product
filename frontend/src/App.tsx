@@ -1,6 +1,6 @@
 // App.tsx
 import { RecoilRoot } from 'recoil';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PatientsList from './components/pages/PatientsList';
 import PatientCreate from './components/pages/PatientCreate';
 import PatientUpdate from './components/pages/PatientUpdate';
@@ -11,9 +11,6 @@ const App = () => {
     <RecoilRoot>
       <Router>
         <AppContainer>
-          <Nav>
-            <Link to="/patients">患者一覧</Link>
-          </Nav>
           <Routes>
             <Route path="/patients" element={<PatientsList />} />
             <Route path="/patients/new" element={<PatientCreate />} />

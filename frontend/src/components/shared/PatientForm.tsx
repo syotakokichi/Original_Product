@@ -2,13 +2,15 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Patient } from '../../state/patients';
 import { Form, FormButton, FormLabel, FormInput, FormSelect } from '../../styles/FormStyles';
+import { Button } from '../../styles/CommonStyles';
 
 interface PatientFormProps {
   defaultValues?: Patient;
   onSubmit: SubmitHandler<Patient>;
+  formType: 'register' | 'update';
 }
 
-const PatientForm: React.FC<PatientFormProps> = ({ defaultValues, onSubmit }) => {
+const PatientForm: React.FC<PatientFormProps> = ({ defaultValues, onSubmit, formType }) => {
   const { register, handleSubmit } = useForm<Patient>({ defaultValues });
 
   return (
@@ -62,7 +64,7 @@ const PatientForm: React.FC<PatientFormProps> = ({ defaultValues, onSubmit }) =>
         <FormInput type="number" {...register('dosageTimes')} id="dosageTimes" />
       </FormLabel>
 
-      <FormButton type="submit">登録</FormButton>
+      <FormButton type="submit">{formType === 'update' ? '更新する' : '登録する'}</FormButton>
 
     </Form>
   );

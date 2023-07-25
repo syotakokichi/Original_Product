@@ -1,5 +1,7 @@
 // styles/CommonStyles.ts
 import styled from 'styled-components';
+import { Link as RouterLink } from 'react-router-dom';
+
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -8,19 +10,34 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-  width: fit-content;
-  background-color: #4CAF50;
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 16px auto;
   border: none;
-  border-radius: 4px;
-  color: white;
-  padding: 4px 8px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 8px;
   cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  color: #76bcbd;
+  background-color: white;
+  border: 2px solid #76bcbd; 
+  text-decoration: none;
+  border-radius: 4px;
+
   &:hover {
-    background-color: #3d8c40; // Darken teal color
+    background-color: #76bcbd;
+    color: white;
   }
 `;
+
+export const Link = styled(RouterLink)`
+  text-decoration: none;
+  color: #007bff;
+  &:hover {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: underline;
+  }
+`;
+

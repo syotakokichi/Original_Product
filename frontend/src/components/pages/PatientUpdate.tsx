@@ -25,7 +25,7 @@ const PatientUpdate: React.FC = () => {
   return patient ? (
     <Container>
       <FormTitle>患者情報</FormTitle>
-      <PatientForm defaultValues={patient} onSubmit={onSubmit} />
+      <PatientForm defaultValues={patient} onSubmit={onSubmit} formType="update" />
       <Button onClick={() => navigate('/patients')}>戻る</Button>
     </Container>
   ) : null;

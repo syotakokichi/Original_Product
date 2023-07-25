@@ -4,38 +4,45 @@ import styled from 'styled-components';
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
+  padding: 16px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
 `;
+
+export const FormLabel = styled.label`
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+`;
+
+export const FormInput = styled.input`
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+`;
+
+export const FormSelect = styled.select`
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+`;
+
 
 export const FormButton = styled.button`
   width: fit-content;
-  margin-top: 8px;
+  width: 200px;
+  height: 40px;
+  margin: 0 auto;
   padding: 4px 8px;
   border: none;
   border-radius: 4px;
-  background-color: #008CBA; // Teal color
+  background-color: #76bcbd;
   color: white;
   cursor: pointer;
   font-size: 16px;
 
   &:hover {
-    background-color: #007B9A; // Darken teal color
+    background-color: #66a6a9;
   }
-`;
-
-export const FormLabel = styled.label`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-`;
-
-export const FormInput = styled.input`
-  margin-left: 8px;
-  flex-grow: 1;
-`;
-
-export const FormSelect = styled.select`
-  margin-left: 8px;
-  flex-grow: 1;
 `;

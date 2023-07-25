@@ -19,7 +19,7 @@ const PatientCreate: React.FC = () => {
   return (
     <Container>
       <FormTitle>患者登録</FormTitle>
-      <PatientForm onSubmit={onSubmit}/>
+      <PatientForm onSubmit={onSubmit} formType="register" />
       <Button onClick={() => navigate('/patients')}>戻る</Button>
     </Container>
   );
