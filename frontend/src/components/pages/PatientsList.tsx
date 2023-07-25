@@ -1,11 +1,22 @@
 // PatientsList.tsx
-import { useRecoilValue } from 'recoil';
-import { patientListState } from '../../state/patients';
+import React, { useEffect } from 'react';
+import { useRecoilState } from 'recoil';
+import { patientListState, Patient } from '../../state/patients';
+import { getPatients } from '../../api/patientsApi';
 import { Container, Button, Link } from '../../styles/CommonStyles';
 import { FormTitle, List, ListItem, PatientDetail } from '../../styles/PageStyles';
 
 const PatientsList: React.FC = () => {
-  const patients = useRecoilValue(patientListState);
+  const [patients, setPatients] = useRecoilState(patientListState);
+
+  useEffect(() => {
+    const fetchPatients = async () => {
+      const result = await getPatients();
+      setPatients(result);
+    };
+
+    fetchPatients();
+  }, [setPatients]);
 
   return (
     <Container>
