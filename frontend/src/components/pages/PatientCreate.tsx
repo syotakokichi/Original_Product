@@ -4,6 +4,8 @@ import { useRecoilState } from 'recoil';
 import { useNavigate } from 'react-router-dom';
 import { patientListState, Patient } from '../../state/patients';
 import PatientForm from '../shared/PatientForm';
+import { Container, Button } from '../../styles/CommonStyles';
+import { FormTitle } from '../../styles/PageStyles';
 
 const PatientCreate: React.FC = () => {
   const [patients, setPatients] = useRecoilState(patientListState);
@@ -15,10 +17,11 @@ const PatientCreate: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Create Patient</h1>
-      <PatientForm onSubmit={onSubmit} />
-    </div>
+    <Container>
+      <FormTitle>患者登録</FormTitle>
+      <PatientForm onSubmit={onSubmit} formType="register" />
+      <Button onClick={() => navigate('/patients')}>戻る</Button>
+    </Container>
   );
 };
 

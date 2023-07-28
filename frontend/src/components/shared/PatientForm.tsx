@@ -1,87 +1,72 @@
 // PatientForm.tsx
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Patient } from '../../state/patients';
+import { Form, FormButton, FormLabel, FormInput, FormSelect } from '../../styles/FormStyles';
+import { Button } from '../../styles/CommonStyles';
 
 interface PatientFormProps {
   defaultValues?: Patient;
   onSubmit: SubmitHandler<Patient>;
+  formType: 'register' | 'update';
 }
 
-const PatientForm: React.FC<PatientFormProps> = ({ defaultValues, onSubmit }) => {
+const PatientForm: React.FC<PatientFormProps> = ({ defaultValues, onSubmit, formType }) => {
   const { register, handleSubmit } = useForm<Patient>({ defaultValues });
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <Form onSubmit={handleSubmit(onSubmit)}>
       
-      <label>
+      <FormLabel htmlFor="name">
         名前:
-        <input {...register('name')} />
-      </label>
+        <FormInput {...register('name')} id="name" />
+      </FormLabel>
 
-      <br />
-
-      <label>
+      <FormLabel htmlFor="gender">
         性別:
-        <select {...register('gender')}>
+        <FormSelect {...register('gender')} id="gender">
           <option value="M">男性</option>
           <option value="F">女性</option>
-        </select>
-      </label>
+        </FormSelect>
+      </FormLabel>
 
-      <br />
-
-      <label>
+      <FormLabel htmlFor="birthdate">
         生年月日:
-        <input type="date" {...register('birthdate')} />
-      </label>
+        <FormInput type="date" {...register('birthdate')} id="birthdate" />
+      </FormLabel>
 
-      <br />
-
-      <label>
+      <FormLabel htmlFor="address">
         住所:
-        <input {...register('address')} />
-      </label>
+        <FormInput {...register('address')} id="address" />
+      </FormLabel>
 
-      <br />
-
-      <label>
+      <FormLabel htmlFor="phone">
         電話番号:
-        <input {...register('phone')} />
-      </label>
+        <FormInput {...register('phone')} id="phone" />
+      </FormLabel>
 
-      <br />
-
-      <label>
+      <FormLabel htmlFor="emergency">
         緊急連絡先:
-        <input {...register('emergency')} />
-      </label>
+        <FormInput {...register('emergency')} id="emergency" />
+      </FormLabel>
 
-      <br />
-
-      <label>
+      <FormLabel htmlFor="medicineName">
         薬名:
-        <input {...register('medicineName')} />
-      </label>
+        <FormInput {...register('medicineName')} id="medicineName" />
+      </FormLabel>
 
-      <br />
-
-      <label>
+      <FormLabel htmlFor="unit">
         単位:
-        <input {...register('unit')} />
-      </label>
+        <FormInput {...register('unit')} id="unit" />
+      </FormLabel>
 
-      <br />
-
-      <label>
+      <FormLabel htmlFor="dosageTimes">
         服用回数:
-        <input type="number" {...register('dosageTimes')} />
-      </label>
+        <FormInput type="number" {...register('dosageTimes')} id="dosageTimes" />
+      </FormLabel>
 
-      <br />
+      <FormButton type="submit">{formType === 'update' ? '更新する' : '登録する'}</FormButton>
 
-      <input type="submit" />
-
-    </form>
+    </Form>
   );
 }
 
