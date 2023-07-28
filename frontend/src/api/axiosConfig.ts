@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3001',  // RailsサーバーのURLを設定
+  baseURL: 'http://localhost:3000',  // RailsサーバーのURLを設定
   headers: {
     'Content-Type': 'application/json',
   },

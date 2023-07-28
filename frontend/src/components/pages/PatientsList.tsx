@@ -1,7 +1,7 @@
-// PatientsList.tsx
+// components/pages/PatientsList.tsx
 import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
-import { patientListState, Patient } from '../../state/patients';
+import { patientListState } from '../../state/patients';
 import { getPatients } from '../../api/patientsApi';
 import { Container, Button, Link } from '../../styles/CommonStyles';
 import { FormTitle, List, ListItem, PatientDetail } from '../../styles/PageStyles';
@@ -16,7 +16,7 @@ const PatientsList: React.FC = () => {
     };
 
     fetchPatients();
-  }, [setPatients]);
+  }, []);
 
   return (
     <Container>
@@ -35,11 +35,11 @@ const PatientsList: React.FC = () => {
             <PatientDetail flexBasis={15}>
               <Link to={`/patients/${patient.id}/update`}>{patient.name}</Link>
             </PatientDetail>
-            <PatientDetail flexBasis={10}>{patient.gender === 'M' ? '男性' : '女性'}</PatientDetail>
-            <PatientDetail flexBasis={20}>{patient.birthdate}</PatientDetail>
+            <PatientDetail flexBasis={10}>{patient.sex === 'M' ? '男性' : '女性'}</PatientDetail>
+            <PatientDetail flexBasis={20}>{patient.dob}</PatientDetail>
             <PatientDetail flexBasis={50}>{patient.address}</PatientDetail>
             <PatientDetail flexBasis={25}>{patient.phone}</PatientDetail>
-            <PatientDetail flexBasis={25}>{patient.emergency}</PatientDetail>
+            <PatientDetail flexBasis={25}>{patient.emergency_contact}</PatientDetail>
           </ListItem>
         ))}
       </List>

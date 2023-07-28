@@ -15,7 +15,6 @@ export const ListItem = styled.li`
   margin-bottom: 8px;
 `;
 
-
 export const FormTitle = styled.h1`
   font-size: 2em;
   margin-bottom: 16px;
@@ -23,7 +22,11 @@ export const FormTitle = styled.h1`
   color: #76bcbd;
 `;
 
-export const PatientDetail = styled.span<{ flexBasis: number }>`
+interface PatientDetailProps {
+  flexBasis: number;
+}
+
+export const PatientDetail = styled.span<PatientDetailProps>`
   flex-basis: ${({ flexBasis }) => `${flexBasis}%`};
   margin-right: 10px;
   text-overflow: ellipsis;

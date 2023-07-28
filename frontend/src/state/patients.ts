@@ -1,17 +1,14 @@
-// patians.ts
+// state/patients.ts
 import { atom } from 'recoil';
 
 export interface Patient {
   id: number;
   name: string;
-  gender: string;
-  birthdate: string;
+  sex: string;
+  dob: string;
   address: string;
   phone: string;
-  emergency: string;
-  medicineName: string;
-  unit: string;
-  dosageTimes: number;
+  emergency_contact: string;
 }
 
 export const patientListState = atom<Patient[]>({
