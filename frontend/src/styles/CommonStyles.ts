@@ -41,3 +41,11 @@ export const Link = styled(RouterLink)`
   }
 `;
 
+export const DeleteButton = styled.button`
+  width: 50px;
+  height: 30px;
+  background-color: #e3342f; // Red background for delete button
+  &:hover {
+    background-color: #cc1f1a; // Darker red on hover
+  }
+`;

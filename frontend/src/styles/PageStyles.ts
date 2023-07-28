@@ -33,3 +33,5 @@ export const PatientDetail = styled.span<PatientDetailProps>`
   overflow: hidden;
   word-break: break-all; 
 `;
+
+
