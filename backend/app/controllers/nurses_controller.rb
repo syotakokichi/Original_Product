@@ -40,4 +40,3 @@ class NursesController < ApplicationController
   end
 end
 
-# コントローラー作成

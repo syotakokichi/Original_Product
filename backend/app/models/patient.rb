@@ -5,4 +5,3 @@ class Patient < ApplicationRecord
   has_many :medicines, through: :patient_medicines
 end
 
-# アソシエーション作成
