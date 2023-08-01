@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>患者登録</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+  <main>
+    <div>
+      <h1>患者登録</h1>
+    </div>
+
+    <div class="form-container">
+      <div class="form-field">
+        <h3>名前&emsp;<span class="required">※必須</span></h3>
+        <input type="text" placeholder="山田 太郎">
+      </div>
+
+      <div class="form-field">
+        <h3>性別&emsp;<span class="required">※必須</span></h3>
+        <input type="text" placeholder="男性">
+      </div>
+
+      <div class="form-field">
+        <h3>生年月日&emsp;<span class ="date">(年月日)</span>&emsp;<span class="required">※必須</span></h3>
+        <input type="date" placeholder="19600101">
+      </div>
+    
+      <div class="form-field">
+        <h3>住所&emsp;<span class="required">※必須</span></h3>
+        <input type="text" placeholder="例）神奈川県横浜市〇〇区〇〇町1-1-1">
+      </div>
+    
+      <div class="form-field">
+        <h3>電話番号&emsp;<span class="required">※必須</span></h3>
+        <input type="text" placeholder="例）090-1234-5678">
+      </div>
+    </div>    
+
+    <div class="form-field">
+      <h3>緊急連絡先&emsp;<span class="required">※必須</span></h3>
+      <input type="text" placeholder="例）080-9876-5432">
+    </div>
+
+    <div class="form-field">
+      <h3>薬名&emsp;<span class="required">※必須</span></h3>
+      <input type="text" placeholder="例）薬剤師 太郎">
+    </div>
+
+    <div class="form-field">
+      <h3>単位&emsp;<span class="required">※必須</span></h3>
+      <input type="text" placeholder="例）薬剤師 太郎">
+    </div>
+
+    <div class="form-field">
+      <h3>服用回数&emsp;<span class="required">※必須</span></h3>
+      <input type="text" placeholder="例）2回">
+    </div>
+
+    <div class="form-field">
+      <h3>服用時間&emsp;<span class="required">※必須</span></h3>
+      <input type="text" placeholder="例）8:00, 12:30">
+    </div>
+
+    <button><b>＋</b>お薬追加</button>
+
+    <div>
+      <button>登録する</button>
+      <button>キャンセル</button> 
+    </div>
+  </main>
+
+  <script src="Medication.js"></script>
+</body>
+</html>

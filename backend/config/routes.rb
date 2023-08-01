@@ -7,5 +7,3 @@ Rails.application.routes.draw do
   resources :medicine_taken_records
   resources :nurse_patients, only: [:create, :destroy]
 end
-
-# ルート作成

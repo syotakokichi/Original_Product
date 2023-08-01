@@ -1,8 +1,7 @@
-// PatientForm.tsx
+// components/shared/PatientForm.tsx
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Patient } from '../../state/patients';
 import { Form, FormButton, FormLabel, FormInput, FormSelect } from '../../styles/FormStyles';
-import { Button } from '../../styles/CommonStyles';
 
 interface PatientFormProps {
   defaultValues?: Patient;
@@ -23,7 +22,7 @@ const PatientForm: React.FC<PatientFormProps> = ({ defaultValues, onSubmit, form
 
       <FormLabel htmlFor="gender">
         性別:
-        <FormSelect {...register('gender')} id="gender">
+        <FormSelect {...register('sex')} id="sex">
           <option value="M">男性</option>
           <option value="F">女性</option>
         </FormSelect>
@@ -31,7 +30,7 @@ const PatientForm: React.FC<PatientFormProps> = ({ defaultValues, onSubmit, form
 
       <FormLabel htmlFor="birthdate">
         生年月日:
-        <FormInput type="date" {...register('birthdate')} id="birthdate" />
+        <FormInput type="date" {...register('dob')} id="dob" />
       </FormLabel>
 
       <FormLabel htmlFor="address">
@@ -46,22 +45,7 @@ const PatientForm: React.FC<PatientFormProps> = ({ defaultValues, onSubmit, form
 
       <FormLabel htmlFor="emergency">
         緊急連絡先:
-        <FormInput {...register('emergency')} id="emergency" />
-      </FormLabel>
-
-      <FormLabel htmlFor="medicineName">
-        薬名:
-        <FormInput {...register('medicineName')} id="medicineName" />
-      </FormLabel>
-
-      <FormLabel htmlFor="unit">
-        単位:
-        <FormInput {...register('unit')} id="unit" />
-      </FormLabel>
-
-      <FormLabel htmlFor="dosageTimes">
-        服用回数:
-        <FormInput type="number" {...register('dosageTimes')} id="dosageTimes" />
+        <FormInput {...register('emergency_contact')} id="emergency_contact" />
       </FormLabel>
 
       <FormButton type="submit">{formType === 'update' ? '更新する' : '登録する'}</FormButton>
