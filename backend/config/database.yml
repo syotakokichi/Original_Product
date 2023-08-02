@@ -51,5 +51,12 @@ test:
 production:
   <<: *default
   database: medication_management_production
+  adapter: mysql2
   username: medication_management
   password: <%= ENV["MEDICATION_MANAGEMENT_DATABASE_PASSWORD"] %>
+  host: <%= Rails.application.credentials.db[:endpoint] %>
+  encoding: utf8mb4
+  charset: utf8mb4
+  collation: utf8mb4_general_ci
+  pool: 20
+  timeout: 1000
