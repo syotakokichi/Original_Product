@@ -1,3 +1,4 @@
+# medicines_controller.rb
 class MedicinesController < ApplicationController
   before_action :set_medicine, only: [:show, :update, :destroy]
 

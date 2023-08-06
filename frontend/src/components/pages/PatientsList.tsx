@@ -7,8 +7,9 @@ import { Container, Button, Link, DeleteButton } from '../../styles/CommonStyles
 import { FormTitle, List, ListItem, PatientDetail } from '../../styles/PageStyles';
 
 const PatientsList: React.FC = () => {
+  console.log('PatientsListがレンダリングされました');
   const [patients, setPatients] = useRecoilState(patientListState);
-
+  
   useEffect(() => {
     const fetchPatients = async () => {
       const result = await getPatients();

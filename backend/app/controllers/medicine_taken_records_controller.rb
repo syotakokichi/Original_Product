@@ -1,3 +1,4 @@
+# medicine_taken_records_controller.rb
 class MedicineTakenRecordsController < ApplicationController
   before_action :set_medicine_taken_record, only: [:show, :update, :destroy]
 

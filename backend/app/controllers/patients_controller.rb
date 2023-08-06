@@ -1,3 +1,4 @@
+# patients_controller.rb
 class PatientsController < ApplicationController
   def index
     @patients = Patient.all

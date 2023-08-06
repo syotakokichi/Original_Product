@@ -1,3 +1,4 @@
+# patient.rb
 class Patient < ApplicationRecord
   has_many :nurse_patients
   has_many :nurses, through: :nurse_patients

@@ -1,3 +1,4 @@
+# patient_medicines_controller.rb
 class PatientMedicinesController < ApplicationController
   before_action :set_patient_medicine, only: [:show, :update, :destroy]
 
