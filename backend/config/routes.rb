@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       end
     end
   # root to: 'patients#index'
-get'*path', to: 'homr#index
+get'*path', to: 'patients#root'
 
 end
 
