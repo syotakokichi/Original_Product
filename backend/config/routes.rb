@@ -10,8 +10,8 @@ Rails.application.routes.draw do
       resources :nurse_patients, only: [:create, :destroy]
     # end
   # end
-  # root to: 'patients#index'
-get'*path', to: 'patients#root'
+  root to: 'patients#root'
+# get'*path', to: 'patients#root'
 
 end
 
