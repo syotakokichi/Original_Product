@@ -1,5 +1,10 @@
 # patients_controller.rb
 class PatientsController < ApplicationController
+
+  def root
+    render file: Rails.root.join('..', 'frontend', 'build', 'index.html')
+  end
+
   def index
     @patients = Patient.all
     render json: @patients
