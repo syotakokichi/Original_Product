@@ -14,4 +14,4 @@
 
 ### [4. テーブル定義書](https://github.com/syotakokichi/Original_Product/blob/main/documents/design/4_%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E5%AE%9A%E7%BE%A9%E6%9B%B8.md)
 
-### [5. インフラ構成図(未完成)](https://github.com/syotakokichi/Original_Product/blob/main/documents/design/5_%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E6%A7%8B%E6%88%90%E5%9B%B3.md)
+### [5. インフラ構成図](https://github.com/syotakokichi/Original_Product/blob/main/documents/design/5_%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E6%A7%8B%E6%88%90%E5%9B%B3.md)
